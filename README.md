@@ -1,6 +1,6 @@
-# How to get started programming the ATTiny
+# Get started programming the ATTiny
 
-These are a few example sketches to program the ATTiny85 using your Arduino. The ATTiny is a small, programmable microcontroller that costs < $1. It works great as a low-cost, smaller and less powerful alternative to an Arduino.
+These are a few example sketches to program the ATTiny85 using the Arduino software. The ATTiny is a tiny programmable microcontroller that costs < $1. It works great as a low-cost, smaller and less powerful alternative to an Arduino.
 
 We used the Tiny AVR programmer to program the ATTiny, following [these instuctions](https://learn.sparkfun.com/tutorials/re-programming-the-lilytiny--lilytwinkle).
 
