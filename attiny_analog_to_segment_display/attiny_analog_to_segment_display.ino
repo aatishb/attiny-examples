@@ -29,10 +29,10 @@ void loop()
 
   voltageReading = analogRead(analogPin);
 
-  tm1637.display(3, count % 10);
-  tm1637.display(2, (count / 10) % 10);
-  tm1637.display(1, (count / 100) % 10);
-  tm1637.display(0, (count / 1000) % 10);
+  tm1637.display(3, voltageReading % 10);
+  tm1637.display(2, (voltageReading / 10) % 10);
+  tm1637.display(1, (voltageReading / 100) % 10);
+  tm1637.display(0, (voltageReading / 1000) % 10);
 
   delay(5);
 
