@@ -16,7 +16,7 @@ int voltageReading = 0;
 unsigned int voltageAverage = 0;   // variable to store the value coming from the sensor
 unsigned int numSteps = 20;   // variable to store the value coming from the sensor
 
-int offset = 5; // if key readings are very close together in value, decrease this to 3 or so
+int offset = 2; // if key readings are very close together in value, decrease this to 3 or so
 
 // Notes
 const int Note_C  = 239;
@@ -35,7 +35,7 @@ const int Note_B  = 127;
 float scale[] = {Note_C, Note_D, Note_E, Note_G, Note_A}; // array storing frequencies for pentatonic scale
 
 // REPLACE with readings from the 5 keys
-float keyReadings[] = {330, 232, 143, 103, 76};
+float keyReadings[] = {307, 302, 255, 279, 257};
 
 void setup() {
   tm1637.init();
@@ -52,7 +52,7 @@ void loop() {
   for( int i=0; i<numSteps; i++){
     voltageReading = analogRead(voltageInPin);
     voltageAverage += voltageReading;
-    delay(5);
+    delay(1);
   }
   voltageAverage = voltageAverage / numSteps;
   
@@ -66,22 +66,22 @@ void loop() {
     delay(500);
   }
   else if(voltageAverage < keyReadings[4] + offset){
-    TinyTone(scale[4], 7, 500); 
+    TinyTone(scale[4], 4, 200); 
   }
   else if(voltageAverage < keyReadings[3] + offset){
-    TinyTone(scale[3], 7, 500); 
+    TinyTone(scale[3], 4, 200); 
   }
   else if(voltageAverage < keyReadings[2] + offset){
-    TinyTone(scale[2], 7, 500); 
+    TinyTone(scale[2], 4, 200); 
   }
   else if(voltageAverage < keyReadings[1] + offset){ 
-    TinyTone(scale[1], 7, 500); 
+    TinyTone(scale[1], 4, 200); 
   }
   else if(voltageAverage < keyReadings[0] + offset){
-    TinyTone(scale[0], 7, 500); 
+    TinyTone(scale[0], 4, 200); 
   }  else{
      //TinyTone(Note_S, 1, 500); 
-     delay(500);
+     delay(200);
   }
   
 }
