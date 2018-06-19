@@ -2,8 +2,6 @@
 
 A few example sketches to program the ATTiny85 using the Arduino software. The ATTiny is a tiny programmable microcontroller that costs < $1. It works great as a low-cost, smaller and less powerful alternative to an Arduino.
 
-We used the Tiny AVR programmer to program the ATTiny, following [these instuctions](https://learn.sparkfun.com/tutorials/re-programming-the-lilytiny--lilytwinkle). If you have a DIP footprint ATTiny (slightly larger with longer legs) instead of the smaller SOIC footprint, you can just plug it in to the socket on the Tiny AVR programmer instead of using the jumper cables & IC clip.
-
 # Hardware
 
 - ATTiny85 or [LilyTwinkle](https://www.sparkfun.com/products/11364)
@@ -14,5 +12,16 @@ If using LilyTwinkle or SOIC footprint ATTiny:
 - IC Test Clip - SOIC 8-pin
 - Male to Female Jumper wires
 
+# Setup
+
+1. Use [this guide](http://highlowtech.org/?p=1695) to install ATtiny drivers for the Arduino IDE. Under the tools menu in the Arduino IDE, we have the Board set to "ATtiny 25/45/85", the Processor set to "ATtiny85" and the Clock to "Internal 8 Mhz".
+
+2. Follow [these instuctions](https://learn.sparkfun.com/tutorials/re-programming-the-lilytiny--lilytwinkle) to connect the ATtiny using the tiny AVR programmer. Under the Tools menu in the Arduino IDE, we have the Programmer set to "USBtinyISP".
+
+If you aren't using the LilyTwinkle and have a DIP footprint ATTiny, you can just plug it in to the socket on the Tiny AVR programmer to program it.
+
+3. Download this repo (green button on the top right), open the examples in your Arduino IDE, and upload to test. You'll also need to build the corresponding circuit.
+
+4. For the clock sketches that use the TM1637 LED display, you'll also need to install the library. In the Arduino IDE, go to Sketch > Include Libraries > Manage Libraries and search for 1637. You should find the Grove 4-Digit Display library by Seeed Studio. Click install.
 # Contributors
 Built by [Aatish Bhatia](https://github.com/aatishb) and [Sharon De La Cruz](https://github.com/unoseistres) at Princeton University's [Council on Science and Technology](http://cst.princeton.edu).
