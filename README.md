@@ -23,7 +23,7 @@ If using LilyTwinkle or SOIC footprint ATTiny:
 4. To use the TM1637 LED display, you'll need to install a library. In the Arduino IDE, go to Sketch > Include Libraries > Manage Libraries and search for 1637. You should find the 'Grove 4-Digit Display' library by Seeed Studio. Click install.
 
 # Contributors
-Built by [Aatish Bhatia](https://github.com/aatishb) and [Sharon De La Cruz](https://github.com/unoseistres) at Princeton University's [Council on Science and Technology](http://cst.princeton.edu), with input from Shefali Nayak.
+Built by [Aatish Bhatia](https://github.com/aatishb), [Sharon De La Cruz](https://github.com/unoseistres), and [Shefali Nayak](https://www.shefalinayak.com/) at Princeton University's [Council on Science and Technology](http://cst.princeton.edu).
 
 The [TinyTone](http://www.technoblogy.com/show?KVO) function for producing musical tones on the ATtiny85 was created by David Johson-Davies.
 
